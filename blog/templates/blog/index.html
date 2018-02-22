@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exercise SignUp</title>
+    </head>
+
+    <body>
+        <h1>Welcome to the Blog!</h1>
+
+        {% if user.is_authenticated %}
+            <h1>Welcome back, {{ user }}!</h1>
+        {% else %}
+            <h1>Welcome to the Home Page! {{ user.is_authenticated }}</h1>
+            <a href="/blog/register/">Register Here</a><br />
+            <a href="/blog/login/">Login Here</a>
+        {% endif %}
+
+        
+    </body>
+
+</html>
